@@ -39,6 +39,7 @@ $(document).ready(function(){
 		$('body').toggleClass('no_scroll');
 		$(this).toggleClass('open_menu');
 		$(this).next("nav").toggleClass('navbar_animate');
+		$(".custom_navbar").slideToggle();
 	});
 
 	// got to page top js
