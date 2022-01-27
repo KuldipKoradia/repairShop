@@ -44,13 +44,45 @@ $(document).ready(function(){
 		$('.custom_navbar').removeAttr('style');
 	});
 
-	// 
+	// nationwide tab JS
 	$('.nationwide_list_tab_title ul li a').click(function(){
-        $('.nationwide_list_tab_title ul li a').removeClass('active_tab');
-        $(this).addClass('active_tab');
-        var tagid = $(this).data('tag');
-        $('.nationwide_list_tab_content .nationwide_tab_content').removeClass('tab_content_active').hide();
-        $('#'+tagid).addClass('tab_content_active').show();
+		$('.nationwide_list_tab_title ul li a').removeClass('active_tab');
+		$(this).addClass('active_tab');
+		var tagid = $(this).data('tag');
+		$('.nationwide_list_tab_content .nationwide_tab_content').removeClass('tab_content_active').hide();
+		$('#'+tagid).addClass('tab_content_active').show();
+	});
+
+    // article slider JS
+    $('.article_slider').slick({
+    	dots: false,
+    	infinite: true,
+    	centerMode: true,
+    	centerPadding: '450px',
+    	slidesToShow: 1,
+    	slidesToScroll: 1,
+    	nextArrow: 'false',
+    	prevArrow: 'false',
+    	// responsive: [
+    	// {
+    	// 	breakpoint: 768,
+    	// 	settings: {
+    	// 		arrows: false,
+    	// 		centerMode: true,
+    	// 		centerPadding: '40px',
+    	// 		slidesToShow: 3
+    	// 	}
+    	// },
+    	// {
+    	// 	breakpoint: 480,
+    	// 	settings: {
+    	// 		arrows: false,
+    	// 		centerMode: true,
+    	// 		centerPadding: '40px',
+    	// 		slidesToShow: 1
+    	// 	}
+    	// }
+    	// ]
     });
 
 	// got to page top js
