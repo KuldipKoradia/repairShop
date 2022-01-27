@@ -36,11 +36,22 @@ $(window).on('load',function() {
 $(document).ready(function(){
 	// navbar toggle js
 	$('.navbar_toggler').click(function(){
-		$('body').toggleClass('no_scroll');
 		$(this).toggleClass('open_menu');
-		$(this).next("nav").toggleClass('navbar_animate');
 		$(".custom_navbar").slideToggle();
 	});
+	$(window).resize(function(){
+		$('.navbar_toggler').removeClass('open_menu');
+		$('.custom_navbar').removeAttr('style');
+	});
+
+	// 
+	$('.nationwide_list_tab_title ul li a').click(function(){
+        $('.nationwide_list_tab_title ul li a').removeClass('active_tab');
+        $(this).addClass('active_tab');
+        var tagid = $(this).data('tag');
+        $('.nationwide_list_tab_content .nationwide_tab_content').removeClass('tab_content_active').hide();
+        $('#'+tagid).addClass('tab_content_active').show();
+    });
 
 	// got to page top js
 	// $(window).on('load scroll',function(){
