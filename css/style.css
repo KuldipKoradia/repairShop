@@ -72,10 +72,12 @@ img{
     max-width: 100%;
     display: block;
 }
+.cpc-675,
 .cpc-1166,
 .cpc {
     display: block !important;
 }
+.csp-675,
 .csp-1166,
 .csp {
     display: none !important;
@@ -93,6 +95,14 @@ img{
         display: none !important;
     }
     .csp{
+        display: block !important;
+    }
+}
+@media (max-width: 675px){
+    .cpc-675{
+        display: none !important;
+    }
+    .csp-675{
         display: block !important;
     }
 }
@@ -569,9 +579,9 @@ header.site_header .custom_navbar ul li a:hover {
 }
 .nationwide_section .nationwide_contnet_inner {
     width: 100%;
-    max-width: 640px;
+    max-width: 670px;
     margin: auto;
-    padding: 45px 0;
+    padding: 45px 15px;
 }
 .nationwide_contnet_sec .nationwide_contnet_inner h2 {
     color: #323246;
@@ -620,7 +630,6 @@ header.site_header .custom_navbar ul li a:hover {
 .nationwide_tab_content {
     padding: 22px 25px;
     border: 1px solid #8c96aa;
-    border-top: none;
 }
 .nationwide_tab_content .nationwide_tab_content_input {
     display: -ms-flexbox;
@@ -669,21 +678,12 @@ header.site_header .custom_navbar ul li a:hover {
     color: #fff;
     font-weight: 900;
     border: none;
-    padding: 10px 25px 10px 49px;
+    padding: 10px 24px 10px 25px;
     height: 55px;
 }
-.nationwide_tab_content .nationwide_tab_content_input button:before {
-    content: '\f3c5';
-    font-family: FontAwesome;
-    font-size: 22px;
-    width: 16px;
-    height: 29px;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    left: 22px;
-    bottom: 0;
-    margin: auto;
+.nationwide_tab_content .nationwide_tab_content_input button i {
+    margin-right: 10px;
+    font-size: 20px;
 }
 .model_name_select {
     display: -ms-flexbox;
@@ -773,6 +773,29 @@ header.site_header .custom_navbar ul li a:hover {
     font-size: 20px;
     font-weight: 700;
     box-shadow: 4px 8px 10px 0 #bfc8d1;
+}
+.repair_shop_btn {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #fff;
+    background-color: #4776e1;
+    text-align: center;
+    color: #fff;
+    height: 80px;
+    line-height: 74px;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 0px 30px;
+    border-radius: 40px;
+    position: fixed;
+    bottom: 11%;
+    right: 20px;
+    z-index: 1;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
 /*nationwide section css end*/
 
@@ -904,6 +927,70 @@ header.site_header .custom_navbar ul li a:hover {
     color: #8c96aa;
     font-weight: 700;
 }
+.custom_model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.custom_model .custom_model_content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 847px;
+    margin: auto;
+    border-radius: 30px;
+    position: relative;
+}
+.custom_model .custom_model_content a.model_close_btn {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    background-color: #62bfeb;
+    font-size: 23px;
+}
+.custom_model_content_inner {
+    width: 100%;
+    max-width: 685px;
+    margin: auto;
+    padding: 100px 15px;
+}
+.custom_model_content_inner .common_heading {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.custom_model_content_inner ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -10px;
+}
+.custom_model_content_inner ul li {
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.custom_model_content_inner ul li a {
+    min-width: 115px;
+    display: block;
+    height: 60px;
+    line-height: 56px;
+    border: 2px solid #8c96aa;
+    text-align: center;
+    color: #8c96aa;
+    font-size: 24px;
+}
 /*symptoms section css end*/
 
 /*information section css start*/
@@ -944,7 +1031,7 @@ header.site_header .custom_navbar ul li a:hover {
 .article_box_text {
     padding: 28px 35px;
     background-color: #fff;
-    box-shadow: 0 4px 5px 2px rgb(150 150 150 / 70%);
+    box-shadow: 0 3px 5px 0px rgb(150 150 150 / 70%);
     margin-bottom: 10px;
     border-radius: 0 0 20px 20px;
 }
@@ -1163,6 +1250,33 @@ header.site_header .custom_navbar ul li a:hover {
     .footer_link .copyright_text {
         margin-top: 50px;
     }
+    .nationwide_contnet_sec .nationwide_contnet_inner h2 {
+        font-size: 48px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h3 {
+        font-size: 30px;
+        margin: 10px 0 28px;
+    }
+    .common_heading {
+        font-size: 46px;
+    }
+    .chosen_content_box_sec .custom_col_3 {
+        margin-top: 40px;
+    }
+    .chosen_box_image img {
+        max-width: 131px;
+        max-height: 113px;
+    }
+    .chosen_box_text h4 {
+        font-size: 30px;
+        margin: 25px 0 15px;
+    }
+    .chosen_box_text p {
+        font-size: 20px;
+    }
+    .chosen_content_box_sec .chosen_box {
+        padding: 50px 30px 30px;
+    }
 }
 @media(max-width: 1166px) {
     header.site_header {
@@ -1255,13 +1369,108 @@ header.site_header .custom_navbar ul li a:hover {
         max-width: 200px;
     }
     .site_footer .footer_link {
-        padding: 50px 0 80px;
+        padding: 50px 0 100px;
     }
     .footer_link .copyright_text {
         margin-top: 40px;
     }
+    .nationwide_section {
+        padding: 60px 15px;
+    }
+    .nationwide_section .nationwide_contnet_inner {
+        padding: 40px 15px;
+    }
+    .repair_shop_btn {
+        max-width: 430px;
+        border: 2px solid #fff;
+        height: 75px;
+        line-height: 70px;
+        font-size: 23px;
+        padding: 0px 25px;
+        bottom: 20px;
+    }
+    .article_section,
+    .chosen_section {
+        padding: 60px 0;
+    }
+    .common_heading {
+        font-size: 40px;
+    }
+    .chosen_content_box_sec .chosen_box {
+        padding: 35px 25px 25px;
+    }
+    .chosen_box_image img {
+        max-width: 126px;
+        max-height: 108px;
+    }
+    .chosen_box_text h4 {
+        font-size: 28px;
+        margin: 20px 0 10px;
+    }
+    .symptoms_section {
+        padding: 80px 0 35px;
+    }
+    .symptoms_information_image h4 {
+        top: 18px;
+        left: 26px;
+        font-size: 34px;
+    }
+    .symptoms_information_text ul li a {
+        min-width: 117px;
+        font-size: 24px;
+    }
+    .information_section {
+        padding: 35px 0 80px;
+    }
+    .article_box_text {
+        padding: 20px;
+    }
+    .article_slider_sec {
+        margin-top: 40px;
+    }
+    .article_box_text label {
+        padding: 6px 12px;
+    }
+    .article_box_text h4 {
+        font-size: 24px;
+        margin: 14px 0;
+    }
+    .article_box_text p {
+        font-size: 20px;
+    }
+    .article_slider_sec .slick-slide {
+        margin: 0 18px;
+    }
+    .article_slider_sec .slick-arrow {
+        width: 75px;
+        height: 75px;
+        font-size: 34px;
+        line-height: 73px;
+    }
+    .article_slider_sec .blue_border_btn {
+        margin-top: 50px;
+    }
+    .blue_border_btn {
+        max-width: 460px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 22px;
+    }
+    .repair_guide_section {
+        padding: 60px 0 40px;
+    }
 }
 @media(max-width: 900px) {
+    .custom_col_3 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .custom_col_6 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     .site_footer .footer_logo a {
         margin: 60px auto 0;
     }
@@ -1304,8 +1513,78 @@ header.site_header .custom_navbar ul li a:hover {
     .footer_link ul li {
         margin: 2px 18px;
     }
+    .nationwide_contnet_sec .nationwide_contnet_inner h2 {
+        font-size: 38px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h3 {
+        font-size: 28px;
+        margin: 10px 0 20px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h3 span {
+        font-size: 20px;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input {
+        font-size: 20px;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input::placeholder {
+        font-size: 18px;
+    }
+    .nationwide_contnet_tabs_sec {
+        margin-bottom: 16px;
+    }
+    .blue_btn {
+        height: 70px;
+        line-height: 70px;
+    }
+    .chosen_content_box_sec .custom_row {
+        margin: 0 -15px;
+        justify-content: center;
+    }
+    .chosen_content_box_sec .custom_col_3 {
+        padding: 0 15px;
+        margin-top: 32px;
+    }
+    .common_heading {
+        font-size: 36px;
+    }
+    .information_section .custom_row, .symptoms_section .custom_row {
+        margin: 0 -15px;
+    }
+    .information_section .custom_col_6, .symptoms_section .custom_col_6 {
+        padding: 0 15px;
+    }
+    .symptoms_section {
+        padding: 60px 0 30px;
+    }
+    .information_section {
+        padding: 30px 0 60px;
+    }
+    .symptoms_information_text ul {
+        margin: 32px -15px 0;
+    }
+    .symptoms_information_text ul li {
+        padding: 0 15px;
+    }
+    .article_slider_sec {
+        margin-top: 32px;
+    }
+    .repair_guide_section {
+        padding: 40px 0 30px;
+    }
+    .repair_prefecture_content {
+        padding: 40px 0;
+    }
+    .repair_prefecture_content h4 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
 }
 @media(max-width: 675px) {
+    .custom_col_3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     .site_footer .businesses_box {
         max-width: 410px;
         padding: 20px;
@@ -1323,7 +1602,7 @@ header.site_header .custom_navbar ul li a:hover {
         margin-top: 16px;
     }
     .site_footer .footer_link {
-        padding: 0 0 30px;
+        padding: 0 0 145px;
     }
     .businesses_box .businesses_box_image {
         -ms-flex: 1 0 auto;
@@ -1351,5 +1630,202 @@ header.site_header .custom_navbar ul li a:hover {
         max-width: 210px;
         border-radius: 15px;
         padding: 7px;
+    }
+    .nationwide_section .nationwide_contnet_sec {
+        max-width: 440px;
+    }
+    .nationwide_section .nationwide_contnet_inner {
+        padding: 35px 15px;
+    }
+    .nationwide_section .nationwide_contnet_inner {
+        max-width: 418px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h2 {
+        font-size: 32px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h3 {
+        font-size: 25px;
+        margin: 10px 0 15px;
+    }
+    .nationwide_contnet_sec .nationwide_contnet_inner h3 span {
+        font-size: 17px;
+        width: 100%;
+        word-break: keep-all;
+    }
+    .nationwide_list_tab_title ul li a {
+        font-size: 19px;
+        padding: 9px;
+    }
+    .nationwide_tab_content {
+        padding: 20px;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input {
+        width: 100%;
+        margin-right: 0;
+        padding-left: 50px;
+        border-radius: 5px 5px 0 0;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input button {
+        border-radius: 0 0 5px 5px;
+        font-size: 18px;
+        padding: 8px 25px;
+        height: 42px;
+        width: 100%;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input::placeholder {
+        font-size: 17px;
+    }
+    .model_name_select {
+        padding: 8px 0;
+    }
+    .discerning_search_box {
+        padding: 9px 10px;
+    }
+    .blue_btn {
+        height: 65px;
+        line-height: 65px;
+        font-size: 23px;
+    }
+    .model_name_select label {
+        width: 94px;
+    }
+    .model_name_select select {
+        width: calc(100% - 94px);
+        padding-left: 12px;
+    }
+    .chosen_content_box_sec .chosen_box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .chosen_box_image {
+        flex: 0 0 90px;
+        max-width: 90px;
+    }
+    .chosen_box_text {
+        flex: 0 0 calc(100% - 90px);
+        max-width: calc(100% - 90px);
+        padding-left: 25px;
+    }
+    .chosen_box_text h4 {
+        text-align: left;
+        margin: 0 0 10px;
+    }
+    .chosen_box_text p {
+        font-size: 19px;
+    }
+    .chosen_box_image img {
+        max-width: 87px;
+        max-height: 106px;
+    }
+    .common_heading {
+        font-size: 32px;
+    }
+    .symptoms_information_text ul {
+        margin: 32px -7px 0;
+    }
+    .symptoms_information_text ul li {
+        padding: 0 7px;
+    }
+    .symptoms_information_text ul li a {
+        min-width: 105px;
+        font-size: 20px;
+        height: 57px;
+        line-height: 51px;
+    }
+    .symptoms_information_text a {
+        font-size: 20px;
+    }
+    .article_box_text label {
+        padding: 2px 12px;
+        font-size: 19px;
+    }
+    .blue_border_btn {
+        max-width: 340px;
+        height: 60px;
+        line-height: 54px;
+        font-size: 20px;
+        border-radius: 23px;
+    }
+    .article_slider_sec .blue_border_btn {
+        margin-top: 60px;
+    }
+    .article_box_text h4 {
+        font-size: 23px;
+    }
+    .article_box_text p {
+        font-size: 17px;
+    }
+    .repair_prefecture_content .custom_drop_menu {
+        display: none;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    .repair_prefecture_content h4 {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        position: relative;
+        font-size: 22px;
+    }
+    .repair_prefecture_content h4 span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.4s;
+        color: #8c96aa;
+    }
+    .repair_prefecture_content h4 span.drop_icon_rotate {
+        transform: rotate(180deg);
+    }
+    .repair_prefecture_content ul li {
+        padding-right: 25px;
+    }
+    .repair_prefecture_content ul li:not(:last-child):before {
+        right: 8px;
+    }
+    .repair_prefecture_content ul li a {
+        font-size: 18px;
+    }
+    .repair_prefecture_content ul {
+        margin-top: 20px;
+    }
+    .repair_shop_btn_box {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        padding: 30px 15px;
+    }
+    .repair_shop_btn {
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input::placeholder {
+        font-size: 16px;
+    }
+}
+@media(max-width: 400px) {
+    .nationwide_tab_content .nationwide_tab_content_input input {
+        padding-left: 42px;
+        background-size: 19px;
+        background-position: 12px center;
+    }
+    .nationwide_tab_content {
+        padding: 15px;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input {
+        padding-left: 29px;
+        background-size: 19px;
+        background-position: 6px center;
     }
 }

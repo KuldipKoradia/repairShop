@@ -58,32 +58,86 @@ $(document).ready(function(){
     	dots: true,
     	infinite: true,
     	centerMode: true,
-    	centerPadding: '450px',
-    	slidesToShow: 1,
+    	centerPadding: '150px',
+    	slidesToShow: 3,
     	slidesToScroll: 1,
     	nextArrow: '<a href="#" class="slick-next slick-arrow article_next"><i class="fas fa-chevron-right"></i></a>',
     	prevArrow: '<a href="#" class="slick-prev slick-arrow article_prev"><i class="fas fa-chevron-left"></i></a>',
-    	// responsive: [
-    	// {
-    	// 	breakpoint: 768,
-    	// 	settings: {
-    	// 		arrows: false,
-    	// 		centerMode: true,
-    	// 		centerPadding: '40px',
-    	// 		slidesToShow: 3
-    	// 	}
-    	// },
-    	// {
-    	// 	breakpoint: 480,
-    	// 	settings: {
-    	// 		arrows: false,
-    	// 		centerMode: true,
-    	// 		centerPadding: '40px',
-    	// 		slidesToShow: 1
-    	// 	}
-    	// }
-    	// ]
+    	responsive: [
+    	{
+    		breakpoint: 1401,
+    		settings: {
+    			centerPadding: '420px',
+    			slidesToShow: 1,
+    		}
+    	},
+    	{
+    		breakpoint: 1285,
+    		settings: {
+    			centerPadding: '350px',
+    			slidesToShow: 1,
+    		}
+    	},
+    	{
+    		breakpoint: 1240,
+    		settings: {
+    			centerPadding: '300px',
+    			slidesToShow: 1,
+    		}
+    	},
+    	{
+    		breakpoint: 1167,
+    		settings: {
+    			centerPadding: '220px',
+    			slidesToShow: 1,
+    		}
+    	},
+    	{
+    		breakpoint: 901,
+    		settings: {
+    			centerPadding: '170px',
+    			slidesToShow: 1,
+    		}
+    	},
+    	{
+    		breakpoint: 676,
+    		settings: {
+    			infinite: false,
+    			centerMode: false,
+    			centerPadding: '0px',
+    			slidesToShow: 1.3,
+    			arrows: false
+    		}
+    	}
+    	]
     });
+
+
+    $(".has_custom_drop_menu h4").click(function(e){
+    	e.preventDefault();
+    	if($(this).next().hasClass('open_drop_down') == true && $(this).hasClass('drop_icon_rotate')){
+    		$(".custom_drop_menu").slideUp().removeClass('open_drop_down');
+    		$(".has_custom_drop_menu span").removeClass('drop_icon_rotate');
+    	}else {
+    		$(".custom_drop_menu").slideUp().removeClass('open_drop_down');
+    		$(".has_custom_drop_menu span").removeClass('drop_icon_rotate');
+    		$(this).next().slideDown().addClass('open_drop_down');
+    		$(this).addClass("drop_icon_rotate");
+    	}
+    });
+
+    // model JS
+    $(".custom_model").hide();
+	$('.model_btn').click(function(){
+		var tagid = $(this).data('tag');
+		console.log(tagid);
+		$('#'+tagid).addClass('model_active').fadeIn();
+		$('body').toggleClass('no_scroll');
+	});
+	$('.model_close_btn').click(function(){
+		$(".custom_model").fadeOut();
+		$('body').removeClass('no_scroll');
+	});
 
 	// got to page top js
 	// $(window).on('load scroll',function(){
