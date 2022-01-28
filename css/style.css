@@ -410,12 +410,12 @@ header.site_header .custom_navbar ul li a:hover {
 .navbar_toggler .navbar_toggler_inner:after,
 .navbar_toggler .navbar_toggler_inner:before {
     width: 30px;
-    height: 5px;
+    height: 4px;
     transition-timing-function: ease;
     transition-duration: 0.3s;
     transition-property: transform;
     border-radius: 0;
-    background-color: #8c96aa;
+    background-color: #63bfeb;
     position: absolute;
     left: 0;
     right: 0;
@@ -443,23 +443,26 @@ header.site_header .custom_navbar ul li a:hover {
     transition: top 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
     transform: rotate(45deg);
     top: 0;
+    background-color: #8c96aa;
 }
 .navbar_toggler.open_menu .navbar_toggler_inner:before {
     top: 0;
     transition: top 75ms ease,opacity 75ms ease 0.12s;
     opacity: 0;
+    background-color: #8c96aa;
 }
 .navbar_toggler.open_menu .navbar_toggler_inner:after {
     bottom: 0;
     transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) 0.12s;
     transform: rotate(-90deg);
+    background-color: #8c96aa;
 }
 /*header section css end*/
 
 /*footer section css start*/
 .site_footer .businesses_box_sec {
     padding: 80px 0 40px;
-    background-color: #fff;
+    background-color: #f0f5fa;
 }
 .site_footer .businesses_box {
     width: 100%;
@@ -941,8 +944,8 @@ header.site_header .custom_navbar ul li a:hover {
 .article_box_text {
     padding: 28px 35px;
     background-color: #fff;
-    box-shadow: 2px 4px 5px 0 rgba(150, 150, 150, 0.7);
-    margin-bottom: 6px;
+    box-shadow: 0 4px 5px 2px rgb(150 150 150 / 70%);
+    margin-bottom: 10px;
     border-radius: 0 0 20px 20px;
 }
 .article_box_text label {
@@ -966,7 +969,125 @@ header.site_header .custom_navbar ul li a:hover {
     color: #50505a;
     line-height: 32px;
 }
+.article_slider_sec .slick-arrow {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+    line-height: 90px;
+}
+.article_slider_sec .slick-arrow.article_next {
+    right: 18px;
+}
+.article_slider_sec .slick-arrow.article_prev {
+    left: 18px;
+    z-index: 1;
+}
+.article_slider_sec .blue_border_btn {
+    margin-top: 55px;
+}
+.blue_border_btn {
+    display: table;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #4776e1;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 41px;
+    color: #4776e1;
+    font-size: 24px;
+    background-color: #fff;
+}
+.article_slider_sec ul.slick-dots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20px;
+    margin: 40px 0 0;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.article_slider_sec ul.slick-dots li {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #d3eaf9;
+}
+.article_slider_sec ul.slick-dots li button {
+    width: 100%;
+    background-color: transparent;
+    font-size: 0px;
+    height: 20px;
+    border: none;
+    display: block;
+    transition: all 0.4s;
+}
+.article_slider_sec ul.slick-dots li.slick-active button {
+    background-color: #62bfeb;
+}
 /*article section css end*/
+
+/*repair guide section css start*/
+.repair_guide_section {
+    background-color: #f0f5fa;
+    padding: 78px 0 40px;
+}
+.repair_prefecture_content {
+    padding: 60px 0;
+    background-color: #fff;
+}
+.repair_prefecture_content h4 {
+    font-size: 30px;
+    color: #323246;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.repair_prefecture_content ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.repair_prefecture_content ul li {
+    position: relative;
+    padding-right: 35px;
+    margin: 2px 0;
+}
+.repair_prefecture_content ul li:not(:last-child):before {
+    content: '/';
+    position: absolute;
+    top: 0;
+    right: 13px;
+    bottom: 0;
+    margin: auto;
+    color: #62bfeb;
+    font-size: 25px;
+    width: 9px;
+    height: 36px;
+}
+.repair_prefecture_content ul li a {
+    font-size: 20px;
+    line-height: 40px;
+    color: #62bfeb;
+    font-weight: 700;
+}
+/*repair guide section css end*/
+
+/*prefecture section css end*/
+.prefecture_section {
+    background-color: #f0f5fa;
+}
+/*prefecture section css end*/
 
 
 

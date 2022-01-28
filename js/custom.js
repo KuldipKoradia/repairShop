@@ -55,14 +55,14 @@ $(document).ready(function(){
 
     // article slider JS
     $('.article_slider').slick({
-    	dots: false,
+    	dots: true,
     	infinite: true,
     	centerMode: true,
     	centerPadding: '450px',
     	slidesToShow: 1,
     	slidesToScroll: 1,
-    	nextArrow: 'false',
-    	prevArrow: 'false',
+    	nextArrow: '<a href="#" class="slick-next slick-arrow article_next"><i class="fas fa-chevron-right"></i></a>',
+    	prevArrow: '<a href="#" class="slick-prev slick-arrow article_prev"><i class="fas fa-chevron-left"></i></a>',
     	// responsive: [
     	// {
     	// 	breakpoint: 768,
