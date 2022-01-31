@@ -112,7 +112,7 @@ $(document).ready(function(){
     	]
     });
 
-
+    // repair guide dropdown JS
     $(".has_custom_drop_menu h4").click(function(e){
     	e.preventDefault();
     	if($(this).next().hasClass('open_drop_down') == true && $(this).hasClass('drop_icon_rotate')){
@@ -137,6 +137,15 @@ $(document).ready(function(){
 	$('.model_close_btn').click(function(){
 		$(".custom_model").fadeOut();
 		$('body').removeClass('no_scroll');
+	});
+
+	// form tab JS
+	$('.all_forms_tab_list ul li a').click(function(){
+		$('.all_forms_tab_list ul li a').removeClass('active_tab');
+		$(this).addClass('active_tab');
+		var tagid = $(this).data('tag');
+		$('.all_forms_tab_content_sec .all_forms_tab_content').removeClass('tab_content_active').hide();
+		$('#'+tagid).addClass('tab_content_active').show();
 	});
 
 	// got to page top js

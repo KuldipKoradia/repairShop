@@ -1182,10 +1182,13 @@ header.site_header .custom_navbar ul li a:hover {
     background-color: #f0f5fa;
 }
 /*prefecture section css end*/
-
+/*inner page header css*/
+.inner_page_header {
+    border-bottom: 1px solid #969696;   
+}
 /*all form section css start*/
 .all_forms_tab_list {
-    padding: 60px 15px;
+    padding: 60px 0;
 }
 .all_forms_tab_list ul {
     display: flex;
@@ -1211,8 +1214,11 @@ header.site_header .custom_navbar ul li a:hover {
     border: 1px solid #8c96aa;
     border-left: none;
 }
+.all_forms_tab_list ul li:first-child a {
+    border-left: 1px solid;
+}
 .all_forms_tab_list ul li:not(:last-child) a {
-    padding-left: 30px;
+    padding-right: 11px;
 }
 .all_forms_tab_list ul li a.active_tab {
     border: 1px solid #62bfeb;
@@ -1224,7 +1230,7 @@ header.site_header .custom_navbar ul li a:hover {
     content: '';
     position: absolute;
     top: 0;
-    right: -30px;
+    right: 0;
     bottom: 0;
     background-color: #fff;
     width: 0;
@@ -1237,7 +1243,28 @@ header.site_header .custom_navbar ul li a:hover {
 .all_forms_tab_list ul li:not(:last-child) a.active_tab:before {
     border-left-color: #62bfeb;
 }
-
+.all_forms_tab_list ul li:not(:last-child) a:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    bottom: 0;
+    background-color: #fff;
+    width: 31px;
+    height: 80px;
+    z-index: 1;
+    background-image: url(../images/right_shap.png);
+    background-repeat: no-repeat;
+}
+.all_forms_tab_list ul li:not(:last-child) a.active_tab:after {
+    background-image: none;
+    border-top: 1px solid #8c96aa;
+    border-bottom: 1px solid #8c96aa;
+    height: auto;
+    top: -1px;
+    bottom: -1px;
+    z-index: 0;
+}
 .application_heading_sec {
     padding: 60px 0;
     background-color: #f0f5fa;
@@ -1432,10 +1459,10 @@ header.site_header .custom_navbar ul li a:hover {
 }
 ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width {
     display: block;
-    margin: 0;
+    margin: 0 !important;
 }
 ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
-    padding: 9px 0;
+    padding: 9px 0 !important;
     width: 100%;
     max-width: 625px;
 }
@@ -1479,7 +1506,7 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     font-weight: 500;
     margin-top: 12px;
 }
-.store_introduction_form_upload_photo {
+.store_introduction_form_upload_photo_inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1548,22 +1575,83 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 .privacy_policy_sec {
     padding: 60px 0;
 }
+.terms_use_section .mCSB_scrollTools,
+.privacy_policy_sec .mCSB_scrollTools {
+    width: 22px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    opacity: 1 !important;
+    border-left: 1px solid #8c96aa;
+}
+.terms_use_section .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.privacy_policy_sec .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 22px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #8c96aa;
+}
+.terms_use_section .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.privacy_policy_sec .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #8c96aa;
+}
+.terms_use_section .mCSB_scrollTools .mCSB_draggerRail,
+.privacy_policy_sec .mCSB_scrollTools .mCSB_draggerRail {
+    width: 22px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #f0f5fa;
+}
 .privacy_policy_sec h5 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
     color: #323246;
 }
+.terms_use_content,
 .privacy_policy_content {
     max-height: 204px;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 20px;
+    padding-left: 20px;
     border: 1px solid #8c96aa;
 }
+.terms_use_section ul,
+.privacy_policy_content ul {
+    padding: 20px 0;
+}
+.privacy_policy_content ul li:not(:last-child) {
+    margin-bottom: 30px;
+}
+.terms_use_section p,
 .privacy_policy_content p {
     color: #646464;
     font-size: 16px;
+}
+/*terms use css*/
+.terms_use_content {
+    margin-top: 20px;
+}
+.terms_use_section .all_form_input {
+    margin: 0;
+}
+.terms_use_section .all_form_input_check_box_list {
+    display: block !important;
+}
+.terms_use_section .all_form_check_box {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+}
+.terms_use_section .blue_btn {
+    max-width: 670px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50px;
+    margin: 64px auto 100px;
+    font-size: 28px;
 }
 /*all form section css end*/
 
@@ -1688,6 +1776,20 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         width: 45px;
         height: 45px;
         line-height: 45px;
+    }
+    .all_forms_tab_list ul li a {
+        font-size: 20px;
+        padding: 19px 5px;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:before {
+        border-top: 33.5px solid #fff;
+        border-left: 26px solid;
+        border-bottom: 33.5px solid #fff;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:after {
+        width: 27px;
+        height: 67px;
+        background-size: contain;
     }
 }
 @media(max-width: 1166px) {
@@ -1871,6 +1973,51 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     .repair_guide_section {
         padding: 60px 0 40px;
     }
+    .application_heading_sec,
+    .all_forms_tab_list {
+        padding: 45px 0;
+    }
+    .application_heading_sec h2 {
+        font-size: 32px;
+        margin: 0 0 10px;
+    }
+    .application_heading_sec h3 {
+        font-size: 20px;
+    }
+    .privacy_policy_sec,
+    .about_tags_form_sec,
+    .store_introduction_form_sec,
+    .store_information_form_sec {
+        padding: 60px 0;
+    }
+    .all_forms_input_sec h4 {
+        font-size: 26px;
+    }
+    .all_form_input select, .all_form_input input[type="text"] {
+        height: 50px;
+    }
+    .all_form_input label span {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    .all_form_input label {
+        font-size: 20px;
+    }
+    .all_form_input:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .all_form_check_box input[type="checkbox"] + label {
+        font-size: 16px;
+    }
+    .terms_use_section .all_form_input_check_box_list {
+        padding: 10px 0;
+    }
+    .terms_use_section .blue_btn {
+        max-width: 620px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 24px;
+    }
 }
 @media(max-width: 900px) {
     .custom_col_3 {
@@ -2008,6 +2155,28 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         height: 47px;
         line-height: 42px;
         font-size: 18px;
+    }
+    .all_forms_tab_list ul li a {
+        font-size: 18px;
+        padding: 16px 5px;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:before {
+        border-top: 29px solid #fff;
+        border-left: 22px solid;
+        border-bottom: 29px solid #fff;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:after {
+        width: 23px;
+        height: 58px;
+    }
+    .all_forms_tab_list ul {
+        max-width: 645px;
+    }
+    .registrant_information_form_sec p.small_heading, .about_tags_form_sec p {
+        font-size: 18px;
+    }
+    .all_forms_input_sec .all_forms_input_content {
+        padding: 40px 30px;
     }
 }
 @media(max-width: 675px) {
@@ -2272,6 +2441,104 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         line-height: 42px;
         font-size: 16px;
     }
+    .all_forms_input_sec .all_forms_input_content {
+        padding: 30px 20px;
+    }
+    .all_forms_tab_list ul {
+        max-width: 400px;
+    }
+    .all_forms_tab_list ul li a {
+        font-size: 15px;
+        padding: 9px 5px;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:before {
+        border-top: 19px solid #fff;
+        border-left: 15px solid;
+        border-bottom: 19px solid #fff;
+    }
+    .all_forms_tab_list ul li:not(:last-child) a:after {
+        width: 16px;
+        height: 39px;
+    }
+    .all_form_input p.input_small_text {
+        color: #8c96aa;
+    }
+    .all_forms_tab_list {
+        padding: 25px 0;
+    }
+    .all_form_input select, .all_form_input input[type="text"] {
+        margin: 10px 0 5px;
+        padding: 0 15px;
+    }
+    .all_form_input ul.all_form_input_check_box_list {
+        margin: 15px -8px 0;
+    }
+    .all_form_input ul.all_form_input_check_box_list li {
+        padding: 5px 8px;
+    }
+    .all_form_input p.input_big_text {
+        font-size: 16px;
+    }
+    .all_form_input ul.all_form_input_button li:first-child {
+        flex: 0 0 43%;
+        max-width: 43%;
+    }
+    .all_form_input ul.all_form_input_button li {
+        flex: 0 0 57%;
+        max-width: 57%;
+    }
+    .more_information_form_sec ul.all_form_input_check_box_list {
+        margin-top: 10px !important;
+    }
+    .all_form_input .dote_text {
+        font-size: 16px;
+    }
+    .all_form_input .dote_text:before {
+        width: 14px;
+        height: 14px;
+    }
+    .all_form_input .file_upload {
+        display: none;
+    }
+    .store_introduction_form_upload_photo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-top: 14px;
+    }
+    .store_introduction_form_sec button {
+        max-width: 214px;
+        height: 50px;
+    }
+    .store_introduction_form_upload_photo_inner {
+        margin: 0;
+    }
+    .terms_use_content, .privacy_policy_content {
+        padding-left: 15px;
+    }
+    .terms_use_section ul, .privacy_policy_content ul {
+        padding: 15px 0;
+    }
+    .terms_use_section .all_form_input_check_box_list  {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .terms_use_section .all_form_input_check_box_list li {
+        padding: 0 !important;
+    }
+    .terms_use_section .blue_btn {
+        max-width: 374px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 24px;
+        font-size: 22px;
+        margin-top: 60px;
+    }
+    .all_form_input ul.all_form_input_button li button {
+        font-size: 18px;
+    }
 }
 @media(max-width: 400px) {
     .nationwide_tab_content .nationwide_tab_content_input input {
@@ -2286,5 +2553,20 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         padding-left: 29px;
         background-size: 19px;
         background-position: 6px center;
+    }
+    .all_forms_input_sec .all_forms_input_content {
+        padding: 20px 15px;
+    }
+    .all_forms_tab_list ul li {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 4px 0;
+    }
+    .all_forms_tab_list ul li a {
+        border: 1px solid #8c96aa;
+    }
+    .all_forms_tab_list ul li a:before,
+    .all_forms_tab_list ul li a:after {
+        display: none !important;
     }
 }
