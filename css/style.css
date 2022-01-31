@@ -1655,6 +1655,44 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 }
 /*all form section css end*/
 
+/*quote form list css start*/
+.all_forms_tab_list.quote_form_list ul li a.active_tab {
+    background-color: #4776e1;
+    border-color: #4776e1;
+}
+.all_forms_tab_list.quote_form_list ul li:not(:last-child) a.active_tab:before {
+    border-left-color: #4776e1;
+}
+.application_heading_sec span {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    background-color: #62bfeb;
+    margin: 0 auto 9px;
+    max-width: 290px;
+    font-weight: 500;
+}
+/*about form css*/
+.about_form_sec {
+    padding: 80px 0 60px;
+}
+.desired_form_sec ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width,
+.trouble_form_sec ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width {
+    margin-top: 10px !important;
+}
+/*desired form css*/
+.desired_form_sec {
+    padding: 70px 0;
+}
+/*customers form css*/
+.customers_form_sec {
+    padding: 75px 0 0;
+}
+/*quote form list css end*/
+
 
 
 /*responsive css start*/
@@ -2538,6 +2576,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     }
     .all_form_input ul.all_form_input_button li button {
         font-size: 18px;
+    }
+    .inner_page_header {
+        border-bottom: none;
     }
 }
 @media(max-width: 400px) {

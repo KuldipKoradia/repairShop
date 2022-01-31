@@ -148,6 +148,18 @@ $(document).ready(function(){
 		$('#'+tagid).addClass('tab_content_active').show();
 	});
 
+	// check box JS
+	// $('.all_form_check_box input[type="checkbox"]').click(function(){
+	// 	var tagid = $(this).attr('id');
+	// 	console.log("check box id", tagid);
+	// 	$(this).parents(".all_form_check_box").addClass("checkbox_active");
+	// 	if ($(this).parents(".all_form_check_box").hasClass() == true){
+	// 		$(this).parents(".all_form_check_box").addClass("checkbox_active");
+	// 	}else {
+	// 		$(this).parents(".all_form_check_box").removeClass("checkbox_active");
+	// 	}
+	// });
+
 	// got to page top js
 	// $(window).on('load scroll',function(){
 	// 	var	windowTop = $(window).scrollTop();
