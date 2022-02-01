@@ -777,7 +777,10 @@ header.site_header .custom_navbar ul li a:hover {
 .repair_shop_btn {
     width: 100%;
     max-width: 480px;
+    display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -934,6 +937,7 @@ header.site_header .custom_navbar ul li a:hover {
     right: 0;
     bottom: 0;
     z-index: 99;
+    display: -ms-flexbox;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -964,7 +968,10 @@ header.site_header .custom_navbar ul li a:hover {
     margin: auto;
     padding: 0 15px;
     min-height: 78.6vh;
+    display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -1148,7 +1155,10 @@ header.site_header .custom_navbar ul li a:hover {
     margin-bottom: 40px;
 }
 .repair_prefecture_content ul {
+    display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: flex-end;
 }
@@ -1191,7 +1201,9 @@ header.site_header .custom_navbar ul li a:hover {
     padding: 60px 0;
 }
 .all_forms_tab_list ul {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
@@ -1364,7 +1376,9 @@ header.site_header .custom_navbar ul li a:hover {
     margin-top: 10px;
 }
 .all_form_input ul.all_form_input_check_box_list {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: flex-end;
     margin: 15px -10px 0;
@@ -1435,7 +1449,9 @@ header.site_header .custom_navbar ul li a:hover {
 }
 /*address css*/
 .all_form_input ul.all_form_input_button {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: center;
     margin: 15px -10px 10px;
@@ -1521,7 +1537,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     margin-top: 12px;
 }
 .store_introduction_form_upload_photo_inner {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: center;
     margin: 14px 0 10px;
@@ -1533,7 +1551,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     text-align: center;
     line-height: 30px;
     overflow: hidden;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -1707,7 +1727,252 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 }
 /*quote form list css end*/
 
-
+/*search result page css*/
+/*contacts form section css start*/
+.contents_form_section {
+    background-color: #f0f5fa;
+    padding: 20px 0;
+}
+.contents_form_section .custom_container {
+    max-width: 1200px;
+    padding: 0px 30px;
+}
+.contents_form_sec {
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 20px 40px;
+}
+.contents_form_sec .custom_row {
+    margin: 0px -11px;
+}
+.contents_tab_col {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 11px;
+}
+.contents_content_col {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 11px;
+}
+.contents_form_sec .nationwide_contnet_tabs_sec {
+    margin: 0;
+}
+.contents_form_sec .nationwide_list_tab_title ul li a {
+    font-size: 16px;
+    padding: 5px 15px;
+}
+.contents_form_sec .nationwide_tab_content {
+    padding: 12px 18px;
+}
+.contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input {
+    width: calc(100% - 143px);
+    height: 40px;
+    font-size: 16px;
+    margin-right: 20px;
+    padding-left: 15px;
+    background-image: none;
+}
+.contents_form_sec .nationwide_tab_content .nationwide_tab_content_input select {
+    height: 40px;
+    color: #50505a !important;
+    font-size: 16px;
+    padding-left: 13px;
+    padding-right: 40px;
+}
+.contents_form_sec .nationwide_tab_content_input button {
+    font-size: 16px;
+    padding: 0;
+    height: 40px;
+    width: 123px;
+}
+.contents_content_box_select .custom_row {
+    margin: 0 -8px;
+}
+.contents_content_box_select .custom_col_6 {
+    padding: 0 8px;
+}
+.contents_form_sec .model_name_select {
+    padding: 0;
+}
+.contents_form_sec .model_name_select label {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    width: 90px;
+}
+.contents_form_sec .model_name_select select {
+    width: calc(100% - 90px);
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+    color: #50505a !important;
+    font-size: 16px;
+    padding-left: 13px;
+    padding-right: 40px;
+}
+.contents_content_box_search .custom_row {
+    margin: 12px 0 0;
+}
+.contents_content_box_search .custom_col_contents_content_btn {
+    flex: 0 0 186px;
+    max-width: 186px;
+}
+.contents_content_box_search .custom_col_contents_content {
+    flex: 0 0 calc(100% - 186px);
+    max-width: calc(100% - 186px);
+}
+.contents_form_sec .discerning_search_box {
+    border: 2px solid #50505a;
+    padding: 9px 10px;
+    margin: 0 25px 0 0;
+}
+.contents_form_sec .discerning_search_box h4 {
+    font-size: 16px;
+}   
+.contents_form_sec .blue_btn {
+    height: 48px;
+    line-height: 48px;
+    border-radius: 18px;
+    font-size: 16px;
+    position: relative;
+}
+.contents_form_sec .blue_btn i {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    margin: auto;
+    width: 18px;
+    height: 16px;
+    font-size: 18px;
+}
+ul.contents_form_text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 15px;
+}
+ul.contents_form_text li {
+    position: relative;
+}
+ul.contents_form_text li:not(:last-child) {
+    padding-right: 15px;
+}
+ul.contents_form_text li:not(:last-child):before {
+    content: '/';
+    position: absolute;
+    top: 0;
+    right: 3px;
+    bottom: 0;
+    color: #50505a;
+}
+ul.contents_form_text li p {
+    font-size: 16px;
+    color: #50505a;
+    font-weight: 700;
+}
+.repair_tokyo_col {
+    padding: 0px 30px;
+    -ms-flex: 0 0 calc(100% - 468px);
+    flex: 0 0 calc(100% - 468px);
+    max-width: calc(100% - 468px);
+}
+/*contacts form section css end*/
+/*search result section css start*/
+.search_result_section {
+    padding: 45px 0;
+}
+.repair_tokyo_content h2 {
+    font-size: 18px;
+    color: #50505a;
+    font-weight: 700;
+}
+.repair_tokyo_content > p {
+    font-size: 19px;
+    text-align: right;
+    color: #50505a;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.store_name_content_sec h3 {
+    font-size: 28px;
+    font-weight: 900;
+    border-bottom: 5px solid #4776e1;
+    padding-bottom: 8px;
+    color: #323246;
+    margin-bottom: 18px;
+}
+.store_name_content_sec h3 span {
+    color: #ff0046;
+}
+.store_name_content_box_inner .custom_row {
+    margin: 0 -12px;
+}
+.store_name_content_box_inner .custom_col_image {
+    -ms-flex: 0 0 272px;
+    flex: 0 0 272px;
+    max-width: 272px;
+    padding: 0px 11px;
+}
+.store_name_content_box_inner .custom_col_text {
+    -ms-flex: 0 0 calc(100% - 272px);
+    flex: 0 0 calc(100% - 272px);
+    max-width: calc(100% - 272px);
+    padding: 0px 11px;
+}
+.store_name_content_box_inner .store_name_content_box_image {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+.store_name_content_box_inner .store_name_content_box_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.store_name_content_box_tag_list_sec .custom_row {
+    margin: 0 -10px;
+}
+.store_name_content_box_tag_list_sec .custom_col_image {
+    -ms-flex: 0 0 165px;
+    flex: 0 0 165px;
+    max-width: 165px;
+    padding: 0px 10px;
+}
+.store_name_content_box_tag_list_sec .custom_col_text {
+    -ms-flex: 0 0 calc(100% - 165px);
+    flex: 0 0 calc(100% - 165px);
+    max-width: calc(100% - 165px);
+    padding: 0px 10px;
+}
+.store_name_content_box_tag_list_sec {
+    margin: 25px 0;
+}
+.store_name_content_box_tag_list_sec .store_box_tag_list_image {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+.store_name_content_box_tag_list_sec .store_box_tag_list_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+/*search result section css end*/
 
 /*responsive css start*/
 @media(max-width: 1240px) {
@@ -2358,7 +2623,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         padding-left: 12px;
     }
     .chosen_content_box_sec .chosen_box {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         align-items: center;
     }
@@ -2565,7 +2832,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
         display: none;
     }
     .store_introduction_form_upload_photo {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         align-items: center;
         flex-direction: row-reverse;
