@@ -505,7 +505,7 @@ ul.tags_list li a:hover {
     width: 100%;
     text-align: center;
     margin-bottom: 12px;
-    min-width: 90px;
+    min-width: 80px;
 }
 .tags_related_to_the_blog ul li a:hover {
 	color: #ffffff;
