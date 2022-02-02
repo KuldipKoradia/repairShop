@@ -117,10 +117,10 @@ $(document).ready(function(){
     	e.preventDefault();
     	if($(this).next().hasClass('open_drop_down') == true && $(this).hasClass('drop_icon_rotate')){
     		$(".custom_drop_menu").slideUp().removeClass('open_drop_down');
-    		$(".has_custom_drop_menu span").removeClass('drop_icon_rotate');
+    		$(".has_custom_drop_menu h4").removeClass('drop_icon_rotate');
     	}else {
     		$(".custom_drop_menu").slideUp().removeClass('open_drop_down');
-    		$(".has_custom_drop_menu span").removeClass('drop_icon_rotate');
+    		$(".has_custom_drop_menu h4").removeClass('drop_icon_rotate');
     		$(this).next().slideDown().addClass('open_drop_down');
     		$(this).addClass("drop_icon_rotate");
     	}
@@ -147,6 +147,9 @@ $(document).ready(function(){
 		$('.all_forms_tab_content_sec .all_forms_tab_content').removeClass('tab_content_active').hide();
 		$('#'+tagid).addClass('tab_content_active').show();
 	});
+
+	// custom scroll JS
+	$(".all_form_scroll_custom").mCustomScrollbar()
 
 	// got to page top js
 	// $(window).on('load scroll',function(){
