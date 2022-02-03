@@ -52,24 +52,34 @@
 				<div class="nationwide_contnet_tabs_sec">
 					<div class="nationwide_list_tab_title">
 						<ul>
-							<li><a class="active_tab" href="javascript:void(0);" data-tag="tab1">エリアから検索</a></li>
+							<li><a href="javascript:void(0);" class="active_tab" data-tag="tab1">エリアから検索</a></li>
 							<li><a href="javascript:void(0);" data-tag="tab2">駅から検索</a></li>
 						</ul>
 					</div>
 					<div class="nationwide_list_tab_content">
-						<div class="nationwide_tab_content tab_content_active" id="tab1">
-							<div class="nationwide_tab_content_input">
+						<div class="nationwide_tab_content" id="tab1">
+							<div class="nationwide_tab_content_input tab_content_active">
 								<input type="text" placeholder="住所を入力（例：大阪市） ※必須">
 								<button><i class="fas fa-map-marker-alt"></i>現在地から探す</button>
 							</div>
 						</div>
-						<div class="nationwide_tab_content" id="tab2" style="display: none;">
+						<div class="nationwide_tab_content" style="display: none;" id="tab2">
 							<div class="nationwide_tab_content_input">
-								<select>
-									<option>大阪駅 </option>
-									<option>大阪駅 </option>
-									<option>大阪駅 </option>
-								</select>
+								<div class="cselect">
+									<input type="text" disabled placeholder="大阪駅">
+									<span class="select_close_btn">x</span>
+									<div class="cselect_options" style="display: none;">
+										<ul>
+											<li><p>北海道・東北</p></li>
+											<li><p>北海道・東北</p></li>
+											<li><p>北海道・東北</p></li>
+											<li><p>北海道・東北</p></li>
+											<li><p>北海道・東北</p></li>
+											<li><p>北海道・東北</p></li>
+										</ul>
+										<span class="select_footer">× リセットして閉じる</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -77,19 +87,39 @@
 				<div class="model_name_sec">
 					<div class="model_name_select light_blue">
 						<label>機種名</label>
-						<select>
-							<option>機種を選択する </option>
-							<option>機種を選択する </option>
-							<option>機種を選択する </option>
-						</select>
+						<div class="model_name_select_dark_blue">
+							<input type="text" disabled placeholder="機種を選択する">
+							<span class="select_close_btn">x</span>
+							<div class="cselect_options" style="display: none;">
+								<ul>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+								</ul>
+								<span class="select_footer">× リセットして閉じる</span>
+							</div>
+						</div>
 					</div>
 					<div class="model_name_select dark_blue">
 						<label>修理項目</label>
-						<select>
-							<option>機種を選択する </option>
-							<option>機種を選択する </option>
-							<option>機種を選択する </option>
-						</select>
+						<div class="model_name_select_light_blue">
+							<input type="text" disabled placeholder="機種を選択する">
+							<span class="select_close_btn">x</span>
+							<div class="cselect_options" style="display: none;">
+								<ul>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+									<li><p>北海道・東北</p></li>
+								</ul>
+								<span class="select_footer">× リセットして閉じる</span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="discerning_search_box_sec">
@@ -127,8 +157,8 @@
 								<img src="images/chosen_image_2.png">
 							</div>
 							<div class="chosen_box_text">
-								<h4>完全無料 0円</h4>
-								<p>会員登録不要で使用料0円！誰でも無料で検索・見積もりができます。</p>
+								<h4>一括見積もり比較</h4>
+								<p>こだわり検索で希望に合った店舗を検索。比較できるよう一括見積もりを可能に！</p>
 							</div>
 						</div>
 					</div>
@@ -138,8 +168,8 @@
 								<img src="images/chosen_image_3.png">
 							</div>
 							<div class="chosen_box_text">
-								<h4>完全無料 0円</h4>
-								<p>会員登録不要で使用料0円！誰でも無料で検索・見積もりができます。</p>
+								<h4>最短５分で返信</h4>
+								<p>店舗からの見積もりは最短5分！お急ぎの方も修理費用をすぐに確認できます。</p>
 							</div>
 						</div>
 					</div>
@@ -1083,5 +1113,81 @@
 	<script src="js/slick.js"></script>
 	<script src="js/intersection-observer-polyfill.js"></script>
 	<script src="js/custom.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(".cselect").each(function(){
+				var $input    = $(this).find("input");
+				var $dropDown = $(this).find("ul");
+				var $dropDownitem = $(this).find(".cselect_options");
+				var $closeBtn = $(this).find(".select_close_btn");
+				$(this).on("click", function(){
+					$($dropDownitem).slideToggle();
+				}); 
+				$dropDown.on("click", "li", function(){
+					$input.val( $(this).text());
+					$($input).addClass("active_select");
+				});
+				$($closeBtn).on("click", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+				$($dropDownitem).on("click", "span", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+			});
+
+			$(".model_name_select_dark_blue").each(function(){
+				var $input    = $(this).find("input");
+				var $dropDown = $(this).find("ul");
+				var $dropDownitem = $(this).find(".cselect_options");
+				var $closeBtn = $(this).find(".select_close_btn");
+				$(this).on("click", function(){
+					$($dropDownitem).slideToggle();
+				}); 
+				$dropDown.on("click", "li", function(){
+					$input.val( $(this).text());
+					$($input).addClass("active_select");
+				});
+				$($closeBtn).on("click", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+				$($dropDownitem).on("click", "span", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+			});
+
+			$(".model_name_select_light_blue").each(function(){
+				var $input    = $(this).find("input");
+				var $dropDown = $(this).find("ul");
+				var $dropDownitem = $(this).find(".cselect_options");
+				var $closeBtn = $(this).find(".select_close_btn");
+				$(this).on("click", function(){
+					$($dropDownitem).slideToggle();
+				}); 
+				$dropDown.on("click", "li", function(){
+					$input.val( $(this).text());
+					$($input).addClass("active_select");
+				});
+				$($closeBtn).on("click", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+				$($dropDownitem).on("click", "span", function(){
+					$($dropDownitem).css("display","none !important");
+					$input.val( $($input).attr('placeholder'));
+					$($input).removeClass("active_select");
+				});
+			});
+		});
+
+	</script>
 </body>
 </html>
