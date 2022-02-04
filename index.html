@@ -27,17 +27,17 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="symptoms_link">
+					<a href="blogs.html" class="symptoms_link">
 						よくある症状
 					</a>
 				</li>
 				<li>
-					<a href="#" class="information_link">
+					<a href="blogs.html" class="information_link">
 						お役立ち情報
 					</a>
 				</li>
 				<li>
-					<a href="#" class="articles_link">
+					<a href="blogs.html" class="articles_link">
 						記事一覧
 					</a>
 				</li>
@@ -59,7 +59,7 @@
 					<div class="nationwide_list_tab_content">
 						<div class="nationwide_tab_content" id="tab1">
 							<div class="nationwide_tab_content_input tab_content_active">
-								<input type="text" placeholder="住所を入力（例：大阪市） ※必須">
+								<input type="text" placeholder="住所を入力（例：大阪市） ※必須" onfocus="inputclearFunction()" onblur="inputclearFunction()" id="nationwide_input" onkeyup="inputclearFunction()">
 								<button><i class="fas fa-map-marker-alt"></i>現在地から探す</button>
 							</div>
 						</div>
@@ -67,17 +67,188 @@
 							<div class="nationwide_tab_content_input">
 								<div class="cselect">
 									<input type="text" disabled placeholder="大阪駅">
-									<span class="select_close_btn">x</span>
+									<span class="select_close_btn"><i class="fas fa-times" aria-hidden="true"></i></span>
 									<div class="cselect_options" style="display: none;">
-										<ul>
-											<li><p>北海道・東北</p></li>
-											<li><p>北海道・東北</p></li>
-											<li><p>北海道・東北</p></li>
-											<li><p>北海道・東北</p></li>
-											<li><p>北海道・東北</p></li>
-											<li><p>北海道・東北</p></li>
+										<ul class="cselect_options_list">
+											<li>
+												<p>北海道・東北</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>関東</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>中部</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>関西</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>中国・四国</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>九州・沖縄</p>
+												<ul class="cselect_inner_steps">
+													<li>
+														<p>岡山駅</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+													<li>
+														<p>●●駅名</p>
+														<a href="#">選択する<i class="fas fa-chevron-right"></i></a>
+													</li>
+												</ul>
+											</li>
 										</ul>
-										<span class="select_footer">× リセットして閉じる</span>
+										<div class="select_footer">
+											<label><i class="fas fa-chevron-left"></i>戻る</label>
+											<span>× リセットして閉じる</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -89,7 +260,7 @@
 						<label>機種名</label>
 						<div class="model_name_select_dark_blue">
 							<input type="text" disabled placeholder="機種を選択する">
-							<span class="select_close_btn">x</span>
+							<span class="select_close_btn"><i class="fas fa-times" aria-hidden="true"></i></span>
 							<div class="cselect_options" style="display: none;">
 								<ul>
 									<li><p>北海道・東北</p></li>
@@ -107,7 +278,7 @@
 						<label>修理項目</label>
 						<div class="model_name_select_light_blue">
 							<input type="text" disabled placeholder="機種を選択する">
-							<span class="select_close_btn">x</span>
+							<span class="select_close_btn"><i class="fas fa-times" aria-hidden="true"></i></span>
 							<div class="cselect_options" style="display: none;">
 								<ul>
 									<li><p>北海道・東北</p></li>
@@ -128,11 +299,11 @@
 						<i class="fas fa-plus-circle"></i>
 					</a>
 				</div>
-				<a href="#" class="blue_btn">修理店を検索する</a>
+				<a href="search.html" class="blue_btn">修理店を検索する</a>
 			</div>
 		</div>
 		<div class="repair_shop_btn_box">
-			<a href="#" class="repair_shop_btn"><i class="fas fa-search search_icon"></i>修理店を検索する<i class="fas fa-chevron-right right_icon"></i></a>
+			<a href="search.html" class="repair_shop_btn"><i class="fas fa-search search_icon"></i>修理店を検索する<i class="fas fa-chevron-right right_icon"></i></a>
 		</div>
 	</section>
 	<section class="chosen_section">
@@ -190,31 +361,31 @@
 					<div class="symptoms_information_text">
 						<ul>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 							<li>
-								<a href="#">タグ名</a>
+								<a href="blogs.html">タグ名</a>
 							</li>
 						</ul>
 						<a href="javascript:void(0);" class="model_btn" data-tag="symptoms_model">もっと見る <i class="fas fa-chevron-right"></i></a>
@@ -228,111 +399,31 @@
 				<div class="custom_model_content_inner">
 					<h3 class="common_heading">タグ一覧</h3>
 					<ul>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -350,33 +441,19 @@
 				<div class="custom_col_6">
 					<div class="symptoms_information_text">
 						<ul>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
-							<li>
-								<a href="#">タグ名</a>
-							</li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+							<li><a href="blogs.html">タグ名</a></li>
+
 						</ul>
 						<a href="javascript:void(0);" class="model_btn" data-tag="information_model">もっと見る <i class="fas fa-chevron-right"></i></a>
 					</div>
@@ -389,111 +466,39 @@
 				<div class="custom_model_content_inner">
 					<h3 class="common_heading">お役立ち情報</h3>
 					<ul>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
-						<li>
-							<a href="#">タグ名</a>
-						</li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						<li><a href="blogs.html">タグ名</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -510,7 +515,7 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
@@ -522,7 +527,7 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
@@ -534,7 +539,7 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
@@ -546,7 +551,7 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
@@ -558,7 +563,7 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
@@ -570,13 +575,13 @@
 						</div>
 						<div class="article_box_text">
 							<label>お役立ち情報</label>
-							<a href="#"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
+							<a href="blog.html"><h4>記事見出し記事見出し記事見出し記事見出し記事見出し</h4></a>
 							<p>記事本文記事本文記事本文記事本文記事本文記事本文記事本文記事本…</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<a href="#" class="blue_border_btn">記事一覧へ</a>
+			<a href="blogs.html" class="blue_border_btn">記事一覧へ</a>
 		</div>
 	</section>
 	<section class="repair_guide_section">
@@ -762,145 +767,145 @@
 					<h4 class="common_heading_small">都道府県から探す</h4>
 					<ul>
 						<li>
-							<a href="#">北海道</a>
+							<a href="search.html">北海道</a>
 						</li>
 						<li>
-							<a href="#">青森</a>
+							<a href="search.html">青森</a>
 						</li>
 						<li>
-							<a href="#">宮城</a>
+							<a href="search.html">宮城</a>
 						</li>
 						<li>
-							<a href="#">岩手</a>
+							<a href="search.html">岩手</a>
 						</li>
 						<li>
-							<a href="#">秋田</a>
+							<a href="search.html">秋田</a>
 						</li>
 						<li>
-							<a href="#">山形</a>
+							<a href="search.html">山形</a>
 						</li>
 						<li>
-							<a href="#">福島</a>
+							<a href="search.html">福島</a>
 						</li>
 						<li>
-							<a href="#">東京</a>
+							<a href="search.html">東京</a>
 						</li>
 						<li>
-							<a href="#">神奈川</a>
+							<a href="search.html">神奈川</a>
 						</li>
 						<li>
-							<a href="#">千葉</a>
+							<a href="search.html">千葉</a>
 						</li>
 						<li>
-							<a href="#">埼玉</a>
+							<a href="search.html">埼玉</a>
 						</li>
 						<li>
-							<a href="#">栃木</a>
+							<a href="search.html">栃木</a>
 						</li>
 						<li>
-							<a href="#">群馬</a>
+							<a href="search.html">群馬</a>
 						</li>
 						<li>
-							<a href="#">茨城</a>
+							<a href="search.html">茨城</a>
 						</li>
 						<li>
-							<a href="#">新潟</a>
+							<a href="search.html">新潟</a>
 						</li>
 						<li>
-							<a href="#">富山</a>
+							<a href="search.html">富山</a>
 						</li>
 						<li>
-							<a href="#">石川</a>
+							<a href="search.html">石川</a>
 						</li>
 						<li>
-							<a href="#">福井</a>
+							<a href="search.html">福井</a>
 						</li>
 						<li>
-							<a href="#">長野</a>
+							<a href="search.html">長野</a>
 						</li>
 						<li>
-							<a href="#">山梨</a>
+							<a href="search.html">山梨</a>
 						</li>
 						<li>
-							<a href="#">岐阜</a>
+							<a href="search.html">岐阜</a>
 						</li>
 						<li>
-							<a href="#">静岡</a>
+							<a href="search.html">静岡</a>
 						</li>
 						<li>
-							<a href="#">愛知</a>
+							<a href="search.html">愛知</a>
 						</li>
 						<li>
-							<a href="#">大阪</a>
+							<a href="search.html">大阪</a>
 						</li>
 						<li>
-							<a href="#">京都</a>
+							<a href="search.html">京都</a>
 						</li>
 						<li>
-							<a href="#">兵庫</a>
+							<a href="search.html">兵庫</a>
 						</li>
 						<li>
-							<a href="#">奈良</a>
+							<a href="search.html">奈良</a>
 						</li>
 						<li>
-							<a href="#">和歌山</a>
+							<a href="search.html">和歌山</a>
 						</li>
 						<li>
-							<a href="#">三重</a>
+							<a href="search.html">三重</a>
 						</li>
 						<li>
-							<a href="#">滋賀</a>
+							<a href="search.html">滋賀</a>
 						</li>
 						<li>
-							<a href="#">鳥取</a>
+							<a href="search.html">鳥取</a>
 						</li>
 						<li>
-							<a href="#">島根</a>
+							<a href="search.html">島根</a>
 						</li>
 						<li>
-							<a href="#">岡山</a>
+							<a href="search.html">岡山</a>
 						</li>
 						<li>
-							<a href="#">広島</a>
+							<a href="search.html">広島</a>
 						</li>
 						<li>
-							<a href="#">山口</a>
+							<a href="search.html">山口</a>
 						</li>
 						<li>
-							<a href="#">香川</a>
+							<a href="search.html">香川</a>
 						</li>
 						<li>
-							<a href="#">愛媛</a>
+							<a href="search.html">愛媛</a>
 						</li>
 						<li>
-							<a href="#">徳島</a>
+							<a href="search.html">徳島</a>
 						</li>
 						<li>
-							<a href="#">高知</a>
+							<a href="search.html">高知</a>
 						</li>
 						<li>
-							<a href="#">福岡</a>
+							<a href="search.html">福岡</a>
 						</li>
 						<li>
-							<a href="#">佐賀</a>
+							<a href="search.html">佐賀</a>
 						</li>
 						<li>
-							<a href="#">長崎</a>
+							<a href="search.html">長崎</a>
 						</li>
 						<li>
-							<a href="#">大分</a>
+							<a href="search.html">大分</a>
 						</li>
 						<li>
-							<a href="#">熊本</a>
+							<a href="search.html">熊本</a>
 						</li>
 						<li>
-							<a href="#">宮崎</a>
+							<a href="search.html">宮崎</a>
 						</li>
 						<li>
-							<a href="#">鹿児島</a>
+							<a href="search.html">鹿児島</a>
 						</li>
 						<li>
-							<a href="#">沖縄</a>
+							<a href="search.html">沖縄</a>
 						</li>
 					</ul>
 				</div>
@@ -910,145 +915,145 @@
 						<div class="drop_menu_item_container">
 							<ul>
 								<li>
-									<a href="#">北海道</a>
+									<a href="search.html">北海道</a>
 								</li>
 								<li>
-									<a href="#">青森</a>
+									<a href="search.html">青森</a>
 								</li>
 								<li>
-									<a href="#">宮城</a>
+									<a href="search.html">宮城</a>
 								</li>
 								<li>
-									<a href="#">岩手</a>
+									<a href="search.html">岩手</a>
 								</li>
 								<li>
-									<a href="#">秋田</a>
+									<a href="search.html">秋田</a>
 								</li>
 								<li>
-									<a href="#">山形</a>
+									<a href="search.html">山形</a>
 								</li>
 								<li>
-									<a href="#">福島</a>
+									<a href="search.html">福島</a>
 								</li>
 								<li>
-									<a href="#">東京</a>
+									<a href="search.html">東京</a>
 								</li>
 								<li>
-									<a href="#">神奈川</a>
+									<a href="search.html">神奈川</a>
 								</li>
 								<li>
-									<a href="#">千葉</a>
+									<a href="search.html">千葉</a>
 								</li>
 								<li>
-									<a href="#">埼玉</a>
+									<a href="search.html">埼玉</a>
 								</li>
 								<li>
-									<a href="#">栃木</a>
+									<a href="search.html">栃木</a>
 								</li>
 								<li>
-									<a href="#">群馬</a>
+									<a href="search.html">群馬</a>
 								</li>
 								<li>
-									<a href="#">茨城</a>
+									<a href="search.html">茨城</a>
 								</li>
 								<li>
-									<a href="#">新潟</a>
+									<a href="search.html">新潟</a>
 								</li>
 								<li>
-									<a href="#">富山</a>
+									<a href="search.html">富山</a>
 								</li>
 								<li>
-									<a href="#">石川</a>
+									<a href="search.html">石川</a>
 								</li>
 								<li>
-									<a href="#">福井</a>
+									<a href="search.html">福井</a>
 								</li>
 								<li>
-									<a href="#">長野</a>
+									<a href="search.html">長野</a>
 								</li>
 								<li>
-									<a href="#">山梨</a>
+									<a href="search.html">山梨</a>
 								</li>
 								<li>
-									<a href="#">岐阜</a>
+									<a href="search.html">岐阜</a>
 								</li>
 								<li>
-									<a href="#">静岡</a>
+									<a href="search.html">静岡</a>
 								</li>
 								<li>
-									<a href="#">愛知</a>
+									<a href="search.html">愛知</a>
 								</li>
 								<li>
-									<a href="#">大阪</a>
+									<a href="search.html">大阪</a>
 								</li>
 								<li>
-									<a href="#">京都</a>
+									<a href="search.html">京都</a>
 								</li>
 								<li>
-									<a href="#">兵庫</a>
+									<a href="search.html">兵庫</a>
 								</li>
 								<li>
-									<a href="#">奈良</a>
+									<a href="search.html">奈良</a>
 								</li>
 								<li>
-									<a href="#">和歌山</a>
+									<a href="search.html">和歌山</a>
 								</li>
 								<li>
-									<a href="#">三重</a>
+									<a href="search.html">三重</a>
 								</li>
 								<li>
-									<a href="#">滋賀</a>
+									<a href="search.html">滋賀</a>
 								</li>
 								<li>
-									<a href="#">鳥取</a>
+									<a href="search.html">鳥取</a>
 								</li>
 								<li>
-									<a href="#">島根</a>
+									<a href="search.html">島根</a>
 								</li>
 								<li>
-									<a href="#">岡山</a>
+									<a href="search.html">岡山</a>
 								</li>
 								<li>
-									<a href="#">広島</a>
+									<a href="search.html">広島</a>
 								</li>
 								<li>
-									<a href="#">山口</a>
+									<a href="search.html">山口</a>
 								</li>
 								<li>
-									<a href="#">香川</a>
+									<a href="search.html">香川</a>
 								</li>
 								<li>
-									<a href="#">愛媛</a>
+									<a href="search.html">愛媛</a>
 								</li>
 								<li>
-									<a href="#">徳島</a>
+									<a href="search.html">徳島</a>
 								</li>
 								<li>
-									<a href="#">高知</a>
+									<a href="search.html">高知</a>
 								</li>
 								<li>
-									<a href="#">福岡</a>
+									<a href="search.html">福岡</a>
 								</li>
 								<li>
-									<a href="#">佐賀</a>
+									<a href="search.html">佐賀</a>
 								</li>
 								<li>
-									<a href="#">長崎</a>
+									<a href="search.html">長崎</a>
 								</li>
 								<li>
-									<a href="#">大分</a>
+									<a href="search.html">大分</a>
 								</li>
 								<li>
-									<a href="#">熊本</a>
+									<a href="search.html">熊本</a>
 								</li>
 								<li>
-									<a href="#">宮崎</a>
+									<a href="search.html">宮崎</a>
 								</li>
 								<li>
-									<a href="#">鹿児島</a>
+									<a href="search.html">鹿児島</a>
 								</li>
 								<li>
-									<a href="#">沖縄</a>
+									<a href="search.html">沖縄</a>
 								</li>
 							</ul>
 						</div>
@@ -1066,7 +1071,7 @@
 					</div>
 					<div class="businesses_box_inner">
 						<h5>事業者の方へ</h5>
-						<a href="#">店舗登録はこちらから</a>
+						<a href="register.html">店舗登録はこちらから</a>
 					</div>
 				</div>
 				<div class="footer_logo">
@@ -1081,18 +1086,18 @@
 						<a href="#">シューリスについて</a>
 					</li>
 					<li>
-						<a href="#">よくある症状</a>
+						<a href="blogs.html">よくある症状</a>
 					</li>
 					<li>
-						<a href="#">お役立ち情報</a>
+						<a href="blogs.html">お役立ち情報</a>
 					</li>
 					<li>
-						<a href="#">記事一覧</a>
+						<a href="blogs.html">記事一覧</a>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<a href="#">店舗一覧はこちら</a>
+						<a href="search.html">店舗一覧はこちら</a>
 					</li>
 					<li>
 						<a href="#">よくある質問</a>
@@ -1115,30 +1120,52 @@
 	<script src="js/custom.js"></script>
 	<script type="text/javascript">
 		$(function() {
+			$(".repair_shop_btn").hide();
 			$(".cselect").each(function(){
-				var $input    = $(this).find("input");
-				var $dropDown = $(this).find("ul");
-				var $dropDownitem = $(this).find(".cselect_options");
-				var $closeBtn = $(this).find(".select_close_btn");
+				var input    = $(this).find("input");
+				var dropDown = $(this).find(".cselect_options_list");
+				var dropDownlist = $(this).find(".cselect_options_list li");
+				var dropDownitem = $(this).find(".cselect_options");
+				var closeBtn = $(this).find(".select_close_btn");
+				var innerSteps = $(this).find(".cselect_inner_steps");
+
+				$(".select_footer label").hide();
 				$(this).on("click", function(){
-					$($dropDownitem).slideToggle();
+					$(dropDownitem).slideToggle();
 				}); 
-				$dropDown.on("click", "li", function(){
-					$input.val( $(this).text());
-					$($input).addClass("active_select");
+				$(dropDownlist).on("click", function(){
+					$(this).children(innerSteps).addClass("cselect_inner_steps_active");
+					$(dropDownitem).slideUp();
+					if ($(innerSteps).hasClass("cselect_inner_steps_active") == true ) {
+						$(".select_footer label").show();
+					}else {
+						$(".select_footer label").hide();
+					}
 				});
-				$($closeBtn).on("click", function(){
-					$($dropDownitem).css("display","none !important");
-					$input.val( $($input).attr('placeholder'));
-					$($input).removeClass("active_select");
+				$(innerSteps).on("click","p", function(){
+					input.val( $(this).text());
+					$(input).addClass("active_select");
+					$(this).removeClass("cselect_inner_steps_active");
+					$(dropDownitem).css("display", "none");
 				});
-				$($dropDownitem).on("click", "span", function(){
-					$($dropDownitem).css("display","none !important");
-					$input.val( $($input).attr('placeholder'));
-					$($input).removeClass("active_select");
+				$(closeBtn).on("click", function(){
+					input.val( $(input).attr('placeholder'));
+					$(input).removeClass("active_select");
+					$(innerSteps).removeClass("cselect_inner_steps_active");
+					$(".select_footer label").hide();
+				});
+				$(dropDownitem).on("click", "span", function(){
+					input.val( $(input).attr('placeholder'));
+					$(input).removeClass("active_select");
+					$(innerSteps).removeClass("cselect_inner_steps_active");
+					$(".select_footer label").hide();
+				});
+				$(dropDownitem).on("click", "label", function(){
+					$(innerSteps).removeClass("cselect_inner_steps_active");
+					$(".select_footer label").hide();
+					$(dropDownitem).slideUp();
 				});
 			});
-
 			$(".model_name_select_dark_blue").each(function(){
 				var $input    = $(this).find("input");
 				var $dropDown = $(this).find("ul");
@@ -1162,7 +1189,6 @@
 					$($input).removeClass("active_select");
 				});
 			});
-
 			$(".model_name_select_light_blue").each(function(){
 				var $input    = $(this).find("input");
 				var $dropDown = $(this).find("ul");
@@ -1187,6 +1213,14 @@
 				});
 			});
 		});
+
+		function inputclearFunction() {
+			if ($("#nationwide_input").val("") == null) {
+				$(this).addClass("nationwide_input_clear");
+			}else {
+				$(this).removeClass("nationwide_input_clear");
+			}
+		}
 
 	</script>
 </body>
