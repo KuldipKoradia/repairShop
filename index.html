@@ -59,7 +59,10 @@
 					<div class="nationwide_list_tab_content">
 						<div class="nationwide_tab_content" id="tab1">
 							<div class="nationwide_tab_content_input tab_content_active">
-								<input type="text" placeholder="住所を入力（例：大阪市） ※必須" onfocus="inputclearFunction()" onblur="inputclearFunction()" id="nationwide_input" onkeyup="inputclearFunction()">
+								<div class="search_input_box">
+									<input type="text" placeholder="住所を入力（例：大阪市） ※必須" onfocus="inputFocus(this)" onblur="inputBlur(this)" id="nationwide_input" onkeyup="inputKeyup(this)">
+									<span class="" onClick="inputClear(this)"><i class="fas fa-times" aria-hidden="true"></i></span>
+								</div>
 								<button><i class="fas fa-map-marker-alt"></i>現在地から探す</button>
 							</div>
 						</div>
@@ -1146,23 +1149,26 @@
 					input.val( $(this).text());
 					$(input).addClass("active_select");
 					$(this).removeClass("cselect_inner_steps_active");
-					$(dropDownitem).css("display", "none");
+					$(this).parents(".cselect_options").addClass("cselect_options_close");
 				});
 				$(closeBtn).on("click", function(){
 					input.val( $(input).attr('placeholder'));
 					$(input).removeClass("active_select");
 					$(innerSteps).removeClass("cselect_inner_steps_active");
 					$(".select_footer label").hide();
+					$(".cselect_options").removeClass("cselect_options_close");
 				});
 				$(dropDownitem).on("click", "span", function(){
 					input.val( $(input).attr('placeholder'));
 					$(input).removeClass("active_select");
 					$(innerSteps).removeClass("cselect_inner_steps_active");
 					$(".select_footer label").hide();
+					$(".cselect_options").removeClass("cselect_options_close");
 				});
 				$(dropDownitem).on("click", "label", function(){
 					$(innerSteps).removeClass("cselect_inner_steps_active");
 					$(".select_footer label").hide();
+					$(".cselect_options").removeClass("cselect_options_close");
 					$(dropDownitem).slideUp();
 				});
 			});
@@ -1214,12 +1220,33 @@
 			});
 		});
 
-		function inputclearFunction() {
-			if ($("#nationwide_input").val("") == null) {
-				$(this).addClass("nationwide_input_clear");
+		// function inputclearFunction() {
+		// 	// if ($("#nationwide_input").val("") == null) {
+		// 	// 	$(this).addClass("nationwide_input_clear");
+		// 	// }else {
+		// 	// 	$(this).removeClass("nationwide_input_clear");
+		// 	// }
+
+		// }
+
+
+		function inputFocus(input) {
+			input.parentElement.classList.add("input_action");
+		} 
+		function inputBlur(input) {
+			input.parentElement.classList.remove("input_action");
+		}
+		function inputKeyup(input) {
+			if(input.value == ""){
+				input.parentElement.classList.remove("input_action_keyup");
 			}else {
-				$(this).removeClass("nationwide_input_clear");
+				input.parentElement.classList.add("input_action_keyup");
 			}
+		}
+		function inputClear(input) {
+			document.getElementById('nationwide_input').value = '';
+			input.parentElement.classList.remove("input_action");
+			input.parentElement.classList.remove("input_action_keyup");
 		}
 
 	</script>

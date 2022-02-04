@@ -1100,10 +1100,11 @@
     .nationwide_tab_content {
         padding: 20px;
     }
-    .nationwide_tab_content .nationwide_tab_content_input input {
+    .nationwide_tab_content .nationwide_tab_content_input .search_input_box {
         width: 100%;
         margin-right: 0;
-        padding-left: 50px;
+    }
+    .nationwide_tab_content .nationwide_tab_content_input input {
         border-radius: 5px 5px 0 0;
         font-size: 16px;
     }
@@ -1467,16 +1468,19 @@
         padding: 0;
         height: 40px;
     }
+    .nationwide_tab_content .nationwide_tab_content_input .search_input_box {
+        width: calc(100% - 152px) !important;
+        margin-right: 15px;
+    }
     .contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input {
-        width: calc(100% - 157px);
         border-radius: 5px;
         padding-left: 30px;
         background-image: url(../images/search_icon.png);
         background-size: 17px;
         background-repeat: no-repeat;
         background-position: 6px center;
-    }
-    .nationwide_tab_content .nationwide_tab_content_input .cselect input {
+        padding-right: 30px;
+    }    .nationwide_tab_content .nationwide_tab_content_input .cselect input {
         background-image: url(../images/right_icon_blue.png) !important;
     }
     .contents_form_sec .model_name_select.light_blue input {
@@ -1616,6 +1620,7 @@
         line-height: 20px;
         font-size: 12px;
     }
+    .contents_form_sec .nationwide_tab_content_input .cselect .cselect_options .select_footer label,
     .nationwide_tab_content_input .cselect .cselect_options .select_footer label {
         padding: 4px 12px;
         font-size: 15px;
@@ -1704,13 +1709,14 @@
     .custom_model_content_inner .common_heading {
         font-size: 20px;
     }
+        .search_input_box span {
+            width: 25px;
+            height: 25px;
+            line-height: 24px;
+            font-size: 15px;
+        }
 }
 @media(max-width: 400px) {
-    .nationwide_tab_content .nationwide_tab_content_input input {
-        padding-left: 42px;
-        background-size: 19px;
-        background-position: 12px center;
-    }
     .nationwide_tab_content {
         padding: 15px;
     }

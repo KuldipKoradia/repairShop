@@ -693,6 +693,9 @@ header.site_header .custom_navbar ul li a:hover {
     z-index: 1;
     border: 2px solid #62bfeb;
 }
+.cselect_options.cselect_options_close {
+    display: none !important;
+}
 .nationwide_tab_content_input .cselect ul li {
     padding: 15px 20px;
     border-bottom: 2px solid #aab4c8;
@@ -732,19 +735,60 @@ header.site_header .custom_navbar ul li a:hover {
     margin-left: auto;
 }
 .nationwide_tab_content .nationwide_tab_content_input input {
-    width: calc(100% - 210px);
+    width: 100%;
     border: 2px solid #4776e1;
     border-radius: 5px;
     height: 55px;
     color: #8c96aa;
     font-size: 20px;
     font-weight: 700;
-    margin-right: 10px;
-    padding-left: 50px;
+    padding: 0 10px 0 50px;
     background-image: url(../images/search_icon.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 15px center;
+}
+.nationwide_tab_content .nationwide_tab_content_input .input_action_keyup input,
+.nationwide_tab_content .nationwide_tab_content_input .input_action input {
+    padding: 0 10px;
+    background-image: none;
+}
+.nationwide_tab_content .nationwide_tab_content_input .input_action_keyup input {
+    padding: 0 50px 0 10px;
+}
+.nationwide_tab_content .nationwide_tab_content_input .search_input_box {
+    width: calc(100% - 210px);
+    margin-right: 10px;
+    position: relative;
+}
+.nationwide_tab_content .nationwide_tab_content_input .input_action input::-webkit-input-placeholder{
+    color: transparent;
+}
+.nationwide_tab_content .nationwide_tab_content_input .input_action input:-ms-input-placeholder{
+    color: transparent;
+}
+.nationwide_tab_content .nationwide_tab_content_input .input_action input::placeholder{
+    color: transparent;
+}
+.search_input_box span {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #aab4c8;
+    text-align: center;
+    color: #fff;
+    line-height: 29px;
+    cursor: pointer;
+}
+.search_input_box.input_action_keyup span {
+    display: block;
 }
 .nationwide_tab_content .nationwide_tab_content_input select {
     width: 100%;
@@ -1961,6 +2005,7 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     max-width: 40%;
     padding: 0 11px;
 }
+.contents_form_sec .search_input_box span,
 .contents_form_sec .nationwide_tab_content .nationwide_tab_content_input .cselect .select_close_btn,
 .contents_form_sec .select_close_btn {
     top: 10px;
@@ -1969,6 +2014,10 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     height: 20px;
     line-height: 20px;
     font-size: 12px;
+}
+.contents_form_sec .search_input_box span {
+    top: 0px;
+    right: 10px;
 }
 .nationwide_tab_content .nationwide_tab_content_input .cselect input {
     background-image: url(../images/down_icon_blue.png) !important;
@@ -1995,8 +2044,11 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 .contents_form_sec .nationwide_tab_content {
     padding: 12px 18px;
 }
+.contents_form_sec .search_input_box {
+    width: calc(100% - 133px) !important;
+}
 .contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input {
-    width: calc(100% - 143px);
+    width: 100%;
     height: 40px;
     font-size: 16px;
     margin-right: 20px;
@@ -2039,8 +2091,9 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 .contents_form_sec .nationwide_tab_content_input .cselect ul li,
 .contents_form_sec .model_name_select .select_footer,
 .contents_form_sec .model_name_select ul li {
-    padding: 8px 20px;
+    padding: 8px 20px !important;
 }
+ul.cselect_inner_steps li a,
 .contents_form_sec .nationwide_tab_content_input .cselect ul li p,
 .contents_form_sec .model_name_select ul li p {
     font-size: 16px;
