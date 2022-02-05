@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="icon" href="images/favicon.png">
@@ -69,9 +70,45 @@
 						<div class="nationwide_tab_content" style="display: none;" id="tab2">
 							<div class="nationwide_tab_content_input">
 								<div class="cselect">
-									<input type="text" disabled placeholder="大阪駅">
+									<input type="text" readonly="readonly" placeholder="大阪駅">
 									<span class="select_close_btn"><i class="fas fa-times" aria-hidden="true"></i></span>
-									<div class="cselect_options" style="display: none;">
+									<div class="cstation_options">
+										<div class="stationareas_wrap">
+											<ul class="station_areas all_form_scroll_custom active">
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+												<li class="station_area"><span>駅から検索</span><span><i class="fas fa-chevron-right"></i></span></li>
+											</ul>
+											<ul class="station_list all_form_scroll_custom">
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+												<li class="station_item"><span>岡山駅</span><span>選択する<i class="fas fa-chevron-right" aria-hidden="true"></i></span></li>
+											</ul>
+										</div>
+										<div class="station_control">
+											<div class="station_prev">
+												<span><i class="fas fa-chevron-left"></i>戻る</span>
+											</div>
+											<div class="station_close">
+												<span>× リセットして閉じる</span>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="cselect_options" style="display: none;">
 										<ul class="cselect_options_list">
 											<li>
 												<p>北海道・東北</p>
@@ -252,7 +289,7 @@
 											<label><i class="fas fa-chevron-left"></i>戻る</label>
 											<span>× リセットして閉じる</span>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -1120,10 +1157,39 @@
 	<script src="js/fonts-awesome-5.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/intersection-observer-polyfill.js"></script>
+	<script src="js/mCustomScrollbar.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			$(".repair_shop_btn").hide();
+			$(".station_prev").on("click", function(){
+				$(".station_areas").removeClass("active").addClass("active");
+				$(".station_list").removeClass("active");
+				$(this).css({"visibility":"hidden"});
+			});
+			$(".station_close").on("click", function(){
+				$(".cstation_options").removeClass("active");
+				$(".nationwide_tab_content_input .cselect input").val("");
+				
+			});
+			$(".station_item").on("click", function(){
+				$(".cstation_options").removeClass("active");
+				$(".nationwide_tab_content_input .cselect input").val("岡山駅");
+			});
+			$(".station_area").on("click", function(){
+				$(".station_list").removeClass("active").addClass("active");
+				$(".station_areas").removeClass("active");
+				$(".station_prev").css({"visibility":"unset"});
+			});
+			$(".nationwide_tab_content_input .cselect input").on("click", function(){
+				if($(".cstation_options").hasClass("active")) {
+				}
+				else {
+					$(".cstation_options").addClass("active");
+					$(".station_areas").removeClass("active").addClass("active");
+					$(".station_list").removeClass("active");
+					$(".station_prev").css({"visibility":"hidden"});
+				}
+			});
 			$(".cselect").each(function(){
 				var input    = $(this).find("input");
 				var dropDown = $(this).find(".cselect_options_list");
@@ -1219,16 +1285,6 @@
 				});
 			});
 		});
-
-		// function inputclearFunction() {
-		// 	// if ($("#nationwide_input").val("") == null) {
-		// 	// 	$(this).addClass("nationwide_input_clear");
-		// 	// }else {
-		// 	// 	$(this).removeClass("nationwide_input_clear");
-		// 	// }
-
-		// }
-
 
 		function inputFocus(input) {
 			input.parentElement.classList.add("input_action");

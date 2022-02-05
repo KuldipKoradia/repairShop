@@ -657,6 +657,7 @@ header.site_header .custom_navbar ul li a:hover {
 .nationwide_tab_content .nationwide_tab_content_input .cselect input {
     width: 100%;
     position: relative;
+    z-index: 2;
 }
 .nationwide_tab_content .nationwide_tab_content_input .cselect input {
     border: 2px solid #62bfeb;
@@ -693,32 +694,76 @@ header.site_header .custom_navbar ul li a:hover {
     z-index: 1;
     border: 2px solid #62bfeb;
 }
-.cselect_options.cselect_options_close {
-    display: none !important;
+.nationwide_tab_content_input .cselect .cstation_options {
+    position: absolute;
+    top: 100%;
+    height:0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    border: 2px solid #62bfeb;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+.nationwide_tab_content_input .cselect .cstation_options.active{
+    height: 410px;
+    opacity: 1;
+}
+.stationareas_wrap{
+    height: 340px;
+    position: relative;
+}
+.station_areas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: all .3s;
+}
+.station_areas.active {
+    transform: translateX(0);
+}
+.station_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: all .3s;
+}
+.station_list.active {
+    transform: translateX(0);
+}
+.station_control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+}
+.stationareas_wrap .mCSB_scrollTools {
+    width: 8px !important;
+}
+.stationareas_wrap .mCSB_inside>.mCSB_container {
+    margin-right: 8px !important;
 }
 .nationwide_tab_content_input .cselect ul li {
     padding: 15px 20px;
     border-bottom: 2px solid #aab4c8;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.nationwide_tab_content_input .cselect ul li p {
+.nationwide_tab_content_input .cselect ul li span {
     font-size: 20px;
     color: #323246;
     font-weight: 700;
     position: relative;
-}
-.nationwide_tab_content_input .cselect ul li p:before {
-    content: '\f054';
-    font-family: FontAwesome;
-    font-size: 20px;
-    width: 12px;
-    height: 21px;
-    color: #323246;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
 }
 .nationwide_tab_content_input .cselect .cselect_options .select_footer {
     display: flex;
@@ -731,15 +776,18 @@ header.site_header .custom_navbar ul li a:hover {
     font-weight: 500;
     cursor: pointer;
 }
-.nationwide_tab_content_input .cselect .cselect_options .select_footer span {
-    margin-left: auto;
+.station_control .station_close span {
+    font-size: 16px;
+    color: #8c96aa;
+    font-weight: 500;
+    cursor: pointer;
 }
 .nationwide_tab_content .nationwide_tab_content_input input {
     width: 100%;
     border: 2px solid #4776e1;
     border-radius: 5px;
     height: 55px;
-    color: #8c96aa;
+    color: #50505a;
     font-size: 20px;
     font-weight: 700;
     padding: 0 10px 0 50px;
@@ -747,6 +795,14 @@ header.site_header .custom_navbar ul li a:hover {
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 15px center;
+}
+.contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input::-webkit-input-placeholder,
+.contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input:-ms-input-placeholder,
+.contents_form_sec .nationwide_tab_content .nationwide_tab_content_input input::placeholder,
+.nationwide_tab_content .nationwide_tab_content_input input::-webkit-input-placeholder,
+.nationwide_tab_content .nationwide_tab_content_input input:-ms-input-placeholder,
+.nationwide_tab_content .nationwide_tab_content_input input::placeholder {
+    color: #8c96aa;
 }
 .nationwide_tab_content .nationwide_tab_content_input .input_action_keyup input,
 .nationwide_tab_content .nationwide_tab_content_input .input_action input {
@@ -877,7 +933,7 @@ header.site_header .custom_navbar ul li a:hover {
     color: #62bfeb;
 }
 .model_name_select input.active_select {
-    color: #8c96aa;
+    color: #50505a;
 }
 .model_name_select .model_name_select_light_blue,
 .model_name_select .model_name_select_light_blue input,
@@ -885,6 +941,7 @@ header.site_header .custom_navbar ul li a:hover {
 .model_name_select .model_name_select_dark_blue input {
     width: calc(100% - 122px);
     position: relative;
+    z-index: 1;
 }
 .model_name_select input.active_select + .select_close_btn {
     display: block;
@@ -900,7 +957,7 @@ header.site_header .custom_navbar ul li a:hover {
     background-color: #aab4c8;
     text-align: center;
     color: #fff;
-    line-height: 25px;
+    line-height: 29px;
     cursor: pointer;
 }
 .model_name_select .model_name_select_light_blue .cselect_options {
@@ -990,7 +1047,6 @@ header.site_header .custom_navbar ul li a:hover {
     width: 100%;
     max-width: 480px;
     display: -ms-flexbox;
-    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1012,15 +1068,7 @@ header.site_header .custom_navbar ul li a:hover {
     z-index: 1;
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2) !important;
 }
-ul.cselect_inner_steps li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-ul.cselect_inner_steps li p:before {
-    display: none;
-}
-ul.cselect_inner_steps li a {
+ul.station_list li span:last-child {
     background-color: #f0f5fa;
     color: #62bfeb;
     font-size: 20px;
@@ -1030,12 +1078,15 @@ ul.cselect_inner_steps li a {
 ul.cselect_inner_steps li a i {
     margin-left: 8px;
 }
-.nationwide_tab_content_input .cselect .cselect_options .select_footer label {
+.station_control .station_prev span {
     border: 1px solid;
     border-radius: 3px;
     padding: 4px 25px 4px 15px;
     font-size: 16px;
     font-weight: 600;
+    color: #8c96aa;
+    cursor: pointer;
+    display: inline-block;
 }
 .nationwide_tab_content_input .cselect .cselect_options .select_footer label i {
     margin-right: 16px;
@@ -1858,7 +1909,10 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 .privacy_policy_sec {
     padding: 60px 0;
 }
-.terms_use_section .mCSB_scrollTools,
+.all_form_scroll_custom .mCSB_inside>.mCSB_container {
+    margin-right: 22px;
+}
+.all_form_scroll_custom .mCSB_scrollTools,
 .privacy_policy_sec .mCSB_scrollTools {
     width: 22px;
     -webkit-border-radius: 0;
@@ -1867,7 +1921,7 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     opacity: 1 !important;
     border-left: 1px solid #8c96aa;
 }
-.terms_use_section .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.all_form_scroll_custom .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .privacy_policy_sec .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     width: 22px;
     -webkit-border-radius: 0;
@@ -1875,11 +1929,11 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
     border-radius: 0;
     background-color: #8c96aa;
 }
-.terms_use_section .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.all_form_scroll_custom .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
 .privacy_policy_sec .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
     background-color: #8c96aa;
 }
-.terms_use_section .mCSB_scrollTools .mCSB_draggerRail,
+.all_form_scroll_custom .mCSB_scrollTools .mCSB_draggerRail,
 .privacy_policy_sec .mCSB_scrollTools .mCSB_draggerRail {
     width: 22px;
     -webkit-border-radius: 0;
@@ -2087,11 +2141,11 @@ ul.all_form_input_check_box_list.all_form_input_check_box_list_full_width li {
 .contents_content_box .model_name_select_light_blue {
     width: calc(100% - 90px);
 }
-.contents_form_sec .nationwide_tab_content_input .cselect .select_footer,
+.contents_form_sec .station_control,
 .contents_form_sec .nationwide_tab_content_input .cselect ul li,
 .contents_form_sec .model_name_select .select_footer,
 .contents_form_sec .model_name_select ul li {
-    padding: 8px 20px !important;
+    padding: 8px 13px !important;
 }
 ul.cselect_inner_steps li a,
 .contents_form_sec .nationwide_tab_content_input .cselect ul li p,
@@ -2103,6 +2157,9 @@ ul.cselect_inner_steps li a,
     font-size: 17px;
     width: 10px;
     height: 19px;
+}
+.contents_form_sec .nationwide_tab_content_input .cselect .cstation_options.active {
+    height: 391px; 
 }
 .contents_form_sec .model_name_select input {
     width: calc(100% - 90px);
@@ -2458,16 +2515,29 @@ ul.store_box_tag_list li p {
     background-color: #fff;
 }
 .store_name_model {
-    padding: 30px 0;
+    padding: 15px 0;
 }
 .store_name_model .custom_model_content {
     border-radius: 20px;
 }
 .store_name_model .custom_model_content_inner {
     padding: 20px 15px;
+    min-height: auto;
 }
 .store_name_model_text {
-    max-height: 88.6vh;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.custom_model_content_inner_text.all_form_scroll_custom .mCSB_inside>.mCSB_container {
+    margin-right: 15px;
+}
+.custom_model_content_inner_text.all_form_scroll_custom .mCSB_scrollTools {
+    width: 10px;
+    border-left: none;
+}
+.custom_model_content_inner_text {
+    max-height: 55.6vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -2552,7 +2622,7 @@ ul.store_box_tag_list li p {
     position: fixed;
     right: 125px;
     bottom: 20px;
-    z-index: 1;
+    z-index: 9;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 .estimate_list_box_section h5 {

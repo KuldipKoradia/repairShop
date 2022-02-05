@@ -1468,7 +1468,7 @@
         padding: 0;
         height: 40px;
     }
-    .nationwide_tab_content .nationwide_tab_content_input .search_input_box {
+    .contents_form_sec .nationwide_tab_content .nationwide_tab_content_input .search_input_box {
         width: calc(100% - 152px) !important;
         margin-right: 15px;
     }
@@ -1587,6 +1587,7 @@
     }
     .store_name_model_btns {
         padding: 18px 0;
+        border-radius: 0 0 10px 10px;
     }
     .store_name_model_heading {
         font-size: 20px;
@@ -1605,6 +1606,7 @@
     .store_name_model_btns a img {
         max-width: 34px;
     }
+    .store_name_model_text,
     .store_name_model .custom_model_content {
         border-radius: 10px;
     }
@@ -1620,8 +1622,7 @@
         line-height: 20px;
         font-size: 12px;
     }
-    .contents_form_sec .nationwide_tab_content_input .cselect .cselect_options .select_footer label,
-    .nationwide_tab_content_input .cselect .cselect_options .select_footer label {
+    .station_control .station_prev span {
         padding: 4px 12px;
         font-size: 15px;
     }
@@ -1629,8 +1630,8 @@
     .nationwide_tab_content_input .cselect ul li {
         padding: 15px;
     }
-    ul.cselect_inner_steps li a,
-    .nationwide_tab_content_input .cselect ul li p {
+    ul.station_list li span:last-child,
+    .nationwide_tab_content_input .cselect ul li span {
         font-size: 16px;
     }
     .nationwide_tab_content_input .cselect ul li p:before {
@@ -1638,7 +1639,7 @@
         width: 10px;
         height: 17px;
     }
-    .nationwide_tab_content_input .cselect .cselect_options .select_footer {
+    .station_control .station_close span {
         font-size: 15px;
     }
     .nationwide_tab_content_input .cselect .cselect_options .select_footer label i {
