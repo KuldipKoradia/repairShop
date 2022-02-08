@@ -941,7 +941,6 @@ header.site_header .custom_navbar ul li a:hover {
 .model_name_select .model_name_select_dark_blue input {
     width: calc(100% - 122px);
     position: relative;
-    z-index: 1;
 }
 .model_name_select input.active_select + .select_close_btn {
     display: block;
@@ -965,6 +964,7 @@ header.site_header .custom_navbar ul li a:hover {
 }
 .model_name_select .model_name_select_dark_blue .cselect_options {
     border: 2px solid #4776e1;
+    z-index: 11;
 }
 .model_name_select .cselect_options {
     position: absolute;
@@ -2622,7 +2622,7 @@ ul.store_box_tag_list li p {
     position: fixed;
     right: 125px;
     bottom: 20px;
-    z-index: 9;
+    z-index: 9999;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 .estimate_list_box_section h5 {
